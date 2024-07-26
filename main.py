@@ -1,10 +1,12 @@
 
 
-from speaker_verification import *
+import speaker_verification as sv
 from record import Record
 from matrix import Matrix
 import time
+import numpy as np
 
+from pathlib import Path
 from scipy.io.wavfile import write
 from threading import Thread
 import RPi.GPIO as GPIO
@@ -39,7 +41,6 @@ RUN = True
 
 def mainVR():
 
-    
     number_of_average = 8
     moving_classifier = []
     for i in range(number_of_average):
@@ -49,7 +50,7 @@ def mainVR():
 
     path_to_records = Path('rec')
     path_to_save_emb = Path('emb')
-    embeddings = insert_speakers(path_to_records, path_to_save_emb, end_filename=sufix, verbose=1)
+    embeddings = sv.insert_speakers(path_to_records, path_to_save_emb, end_filename=sufix, verbose=1)
 
 
     speaker_names = list(embeddings.keys())
@@ -77,7 +78,6 @@ def mainVR():
     print("* start embedding")
     while RUN:
         try:
-
             actual_signal = rec.read()
             record_data = np.append(record_data, actual_signal)
 
@@ -86,8 +86,8 @@ def mainVR():
             #moving_signal = fading(moving_signal, fs, timefold=0.05)
 
             # weryfikacja mówcy
-            embedding = count_embedding(moving_signal, fs)
-            speaker_filename = speaker_ver(embedding, embeddings, coeff=1)
+            embedding = sv.count_embedding(moving_signal, fs)
+            speaker_filename = sv.speaker_ver(embedding, embeddings, coeff=1)
 
             # uśrednienie wyników
             moving_classifier.pop(0)
@@ -132,6 +132,7 @@ def mainM():
     name = ''
     pos = WIDTH
     global RUN
+    
     while RUN:
         
         if show_name_global == 'None':
