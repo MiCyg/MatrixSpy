@@ -1,1 +1,6 @@
-# Speaker recognition on Raspberry Pi
+# Speaker recognition using GE2E
+
+
+
+
+
