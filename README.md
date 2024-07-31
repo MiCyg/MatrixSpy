@@ -1,6 +1,8 @@
 # Speaker Diarization on LED Matrix
 
-![Welcome Image](images/welcome.png)
+<center>
+<img src="images/welcome.png" alt="Welcome Image" width="80%"/>
+</center>
 
 # Description
 
@@ -10,11 +12,15 @@ This project implements the Generalized End-to-End Loss for Speaker Verification
 
 The block diagram below illustrates the setup.
 
-![Schematic](images/schematic.drawio.png)
+<center>
+<img src="images/schematic.drawio.png" alt="Schematic" width="50%" />
+</center>
 
 The microcomputer connects to the LED matrix via one of the 40 available GPIO pins. However, the ReSpeaker HAT occupies all these pins, so an additional connector on the Seeed voicecard module is used.
 
-![Connector Image](images/red_square_on_connector.png)
+<center>
+<img src="images/red_square_on_connector.png" alt="Connector Image" width="50%" />
+</center>
 
 # Speaker Verification
 
@@ -42,21 +48,21 @@ Next, run the program. The microphone signal is streamed in real time, and for e
 - Verify the speaker
 - Display the information of the identified speaker
 
-# Sources
+## Contributing
 
+I welcome contributions! Please fork the repository, make your changes, and submit a pull request. Thank you for helping improve this project!
+
+
+# Sources
 ### Articles:
 - [GE2E](https://arxiv.org/pdf/1710.10467) 
 - [TD-SV](https://arxiv.org/pdf/1509.08062)
 - [YouTube Video](https://www.youtube.com/watch?v=AkCPHw2m6bY)
-
 ### Repos and Libraries:
 - [Seeed-voicecard Driver](https://github.com/respeaker/seeed-voicecard)
 - [GE2E Implementation](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
 - [LED Matrix Driver](https://github.com/rm-hull/luma.core)
 
 
-## Contributing
-
-I welcome contributions! Please fork the repository, make your changes, and submit a pull request. Thank you for helping improve this project!
 
 
