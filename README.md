@@ -1,8 +1,7 @@
 # Speaker Diarization on LED Matrix
-
-<center>
+<p align="center">
 <img src="images/welcome.png" alt="Welcome Image" width="80%"/>
-</center>
+</p>
 
 # Description
 
@@ -12,15 +11,15 @@ This project implements the Generalized End-to-End Loss for Speaker Verification
 
 The block diagram below illustrates the setup.
 
-<center>
+<p align="center">
 <img src="images/schematic.drawio.png" alt="Schematic" width="50%" />
-</center>
+</p>
 
 The microcomputer connects to the LED matrix via one of the 40 available GPIO pins. However, the ReSpeaker HAT occupies all these pins, so an additional connector on the Seeed voicecard module is used.
 
-<center>
+<p align="center">
 <img src="images/red_square_on_connector.png" alt="Connector Image" width="50%" />
-</center>
+</p>
 
 # Speaker Verification
 
