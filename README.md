@@ -51,6 +51,14 @@ Next, run the program. The microphone signal is streamed in real time, and for e
 
 I welcome contributions! Please fork the repository, make your changes, and submit a pull request. Thank you for helping improve this project!
 
+## Raw speaker recognition branch
+This branch is created for testing purposes before deploying to the Raspberry Pi. It contains the core of the SpeakerRecognition functionality. 
+To run the program, simply execute the following command:
+
+```bash
+python main.py
+```
+
 
 # Sources
 ### Articles:
